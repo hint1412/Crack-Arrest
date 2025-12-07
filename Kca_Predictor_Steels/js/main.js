@@ -101,9 +101,9 @@ load the model
 */
 async function start() { 
     //load the model
-    model_classifier = await tf.loadLayersModel('models/classifier/model.json');
-    model_regressor_moderate = await tf.loadLayersModel('models/regressor_moderate/model.json');
-    model_regressor_high = await tf.loadLayersModel('models/regressor_high/model.json');	
+    model_classifier = await tf.loadGraphModel('models/classifier/model.json');
+    model_regressor_moderate = await tf.loadGraphModel('models/regressor_moderate/model.json');
+    model_regressor_high = await tf.loadGraphModel('models/regressor_high/model.json');	
     
     // warm up 
     var a = tf.tensor([[0, 0, 0, 0, 0]]);
@@ -126,3 +126,4 @@ function allowrun() {
     document.getElementById("run").disabled = false;
 
 }
+
