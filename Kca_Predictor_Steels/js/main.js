@@ -58,7 +58,6 @@ function displayme() {
     var input_3 = parseFloat(document.getElementById("input_3").value) || 0.0;
     var input_4 = parseFloat(document.getElementById("input_4").value) || 0.0;
     var input_5 = parseFloat(document.getElementById("input_5").value) || 0.0;
-    var input_6 = parseFloat(document.getElementById("input_6").value) || 0.0;
     const elem_outk = document.getElementById("output_K");
     const elem_recd = document.getElementById("txtarea");
     
@@ -126,4 +125,5 @@ function allowrun() {
     document.getElementById("run").disabled = false;
 
 }
+
 
