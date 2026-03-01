@@ -110,9 +110,19 @@ async function start() {
     var pred = model_classifier.predict(a).dataSync();
     console.log('Classifier pred:', pred);
     var pred = model_regressor_moderate.predict(a).dataSync();
-    console.log('model_regressor_moderate pred:', pred);	
+    console.log('model_regressor_moderate pred:', pred);
     var pred = model_regressor_high.predict(a).dataSync();
-    console.log('model_regressor_high pred:', pred);    
+    console.log('model_regressor_high pred:', pred);
+
+    var a = tf.tensor([[-1.1117, 1.9954, -1.0489, -1.1601, -0.54574]]);
+    console.log('a shape:', a.shape, a.dtype);
+    var pred = model_classifier.predict(a).dataSync();
+    console.log('Classifier pred:', pred);
+    var pred = model_regressor_moderate.predict(a).dataSync();
+    console.log('model_regressor_moderate pred:', pred);
+    var pred = model_regressor_high.predict(a).dataSync();
+    console.log('model_regressor_high pred:', pred);
+
     //allow running
     allowrun();
 }
@@ -125,5 +135,6 @@ function allowrun() {
     document.getElementById("run").disabled = false;
 
 }
+
 
 
