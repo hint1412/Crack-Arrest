@@ -7,8 +7,8 @@ var model_regressor_moderate;
 var model_regressor_high;
 var record_num = 0;
 
-const mu = [0.179756871035941, 1.09654334038055, 0.0166955602536998, 0.0167843551797040];
-const sigma = [0.107727066458787, 0.402653600972482, 0.0106738196144654, 0.0127437259595146];
+const mu = [0.179756871035941, 1.09654334038055, 0.0166955602536998, 0.0167843551797040, 262.6260676532774];
+const sigma = [0.107727066458787, 0.402653600972482, 0.0106738196144654, 0.0127437259595146, 72.335152964648780];
 
 
 /*
@@ -22,7 +22,7 @@ function predictKcaWithClassifier(input_1, input_2, input_3, input_4, input_5) {
             (input_2 - mu[1]) / sigma[1],
             (input_3 - mu[2]) / sigma[2],
             (input_4 - mu[3]) / sigma[3],
-            input_5
+            (input_5 - mu[3]) / sigma[4]
         ];
         const xTensor = tf.tensor2d([xNorm], [1, 5]);
 
@@ -135,6 +135,7 @@ function allowrun() {
     document.getElementById("run").disabled = false;
 
 }
+
 
 
 
