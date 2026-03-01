@@ -22,7 +22,7 @@ function predictKcaWithClassifier(input_1, input_2, input_3, input_4, input_5) {
             (input_2 - mu[1]) / sigma[1],
             (input_3 - mu[2]) / sigma[2],
             (input_4 - mu[3]) / sigma[3],
-            (input_5 - mu[3]) / sigma[4]
+            (input_5 - mu[4]) / sigma[4]
         ];
         const xTensor = tf.tensor2d([xNorm], [1, 5]);
 
@@ -135,6 +135,7 @@ function allowrun() {
     document.getElementById("run").disabled = false;
 
 }
+
 
 
 
